@@ -13,14 +13,17 @@ section .text
 _start:
   push welcome_message
   call print
+  add rsp, 8
 
   call input
 
   push welcome_name
   call print
+  add rsp, 8
 
   push name
   call print
+  add rsp, 8
 
   mov rax, 60 ; sys_exit
   mov rdi, 1
